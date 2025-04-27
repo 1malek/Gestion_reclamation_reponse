@@ -3,9 +3,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lastjavafx.Controller.PaiementController">
-    <TextField fx:id="clientNameField" promptText="Nom du client" />
-    <TextField fx:id="emailField" promptText="Email" />
-    <TextField fx:id="amountField" editable="false" promptText="Montant en Dinars" />
-    <Button onAction="#effectuerPaiement" text="Effectuer le paiement" />
+    <TextField fx:id="clientNameField" promptText="Nom du client"/>
+    <TextField fx:id="emailField" promptText="Email"/>
 </VBox>
