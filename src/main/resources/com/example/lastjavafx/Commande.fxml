@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            stylesheets="@Commande.css"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.lastjavafx.CommandeController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <VBox layoutX="180.0" layoutY="70.0" spacing="10">
+            <TextField fx:id="idClientField" promptText="code Client" styleClass="form-field"/>
+            <TextField fx:id="idLivraisonField" promptText="code Livraison" styleClass="form-field"/>
+            <TextField fx:id="produitField" promptText="Produit" styleClass="form-field"/>
+            <TextField fx:id="prixField" promptText="Prix" styleClass="form-field"/>
+            <TextField fx:id="adresseField" promptText="Adresse" styleClass="form-field"/>
+            <TextField fx:id="telField" promptText="Téléphone" styleClass="form-field"/>
+        </VBox>
+
+
+
+
+        <Button layoutX="150.0" layoutY="385.0" prefWidth="110.0"
+                text="Valider" onAction="#validerCommande" styleClass="primary-button"/>
+        <Button layoutX="280.0" layoutY="385.0" prefWidth="110.0"
+                text="Annuler" onAction="#annulerCommande" styleClass="secondary-button"/>
+    </children>
+
+</AnchorPane>

@@ -1,0 +1,27 @@
+/* En-tête */
+.hbox {
+    -fx-background-color: #8BC34A;
+    -fx-padding: 10;
+}
+
+/* Boutons de navigation */
+.button {
+    -fx-background-color: #558B2F;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Tableau */
+.table-view {
+    -fx-border-color: #333333;
+    -fx-background-color: #FAFAFA;
+}
+
+/* Résumé des Totaux */
+.vbox {
+    -fx-border-color: #8BC34A;
+    -fx-border-width: 2;
+    -fx-background-color: #FAFAFA;
+    -fx-padding: 10;
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.lastjavafx.AccueilClient"
+            prefHeight="600.0" prefWidth="800.0">
+
+    <VBox spacing="20.0" alignment="CENTER" layoutX="150.0" layoutY="30.0"
+          AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <Label text="Bienvenue dans votre espace client"
+               style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+        <Button text="facture" onAction="#handleVoirFacture" prefWidth="200.0"/>
+        <Button text="Voir mon panier" onAction="#handleVoirPanier" prefWidth="200.0"/>
+        <Button text="Voir mon panier client" onAction="#handleVoirPanierClient" prefWidth="200.0"/>
+        <Button text="Mes commandes" onAction="#handleVoirCommandes" prefWidth="200.0"/>
+        <Button text="Se déconnecter" onAction="#handleDeconnexion" prefWidth="200.0"/>
+    </VBox>
+
+    <!-- Zone des produits affichés dynamiquement -->
+    <VBox fx:id="listeProduitsVBox" spacing="15" layoutX="50.0" layoutY="220.0"
+          prefWidth="700.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="50.0"
+          style="-fx-padding: 10;">
+    </VBox>
+
+</AnchorPane>

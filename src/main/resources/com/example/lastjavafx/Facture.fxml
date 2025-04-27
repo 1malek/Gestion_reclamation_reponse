@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.lastjavafx.FactureController"
+      spacing="20" alignment="CENTER" style="-fx-padding: 20;">
+
+    <children>
+        <!-- En-tête -->
+        <HBox spacing="10" style="-fx-background-color: #8BC34A; -fx-padding: 10;">
+            <Label text="AgriEnchère" style="-fx-font-size: 24px; -fx-text-fill: white; -fx-font-weight: bold;"/>
+            <Button text="Accueil" style="-fx-background-color: #558B2F; -fx-text-fill: white;"/>
+            <Button text="Produits" style="-fx-background-color: #558B2F; -fx-text-fill: white;"/>
+            <Button text="Contact" style="-fx-background-color: #558B2F; -fx-text-fill: white;"/>
+        </HBox>
+
+        <!-- Tableau des Produits -->
+        <TableView fx:id="productTable" style="-fx-border-color: #333;">
+            <columns>
+                <TableColumn text="Référence"/>
+                <TableColumn text="Nom Produit"/>
+                <TableColumn text="Quantité"/>
+                <TableColumn text="Prix Unitaire HT"/>
+                <TableColumn text="TVA (%)"/>
+                <TableColumn text="Total TTC"/>
+            </columns>
+        </TableView>
+
+        <!-- Section Résumé -->
+        <VBox spacing="10" style="-fx-padding: 10; -fx-border-color: #8BC34A; -fx-border-width: 2; -fx-background-color: #FAFAFA;">
+            <HBox spacing="10">
+                <Label text="Total HT :" style="-fx-font-size: 16px;"/>
+                <TextField fx:id="totalHTField" promptText="Calculé automatiquement" editable="false"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="TVA :" style="-fx-font-size: 16px;"/>
+                <TextField fx:id="tvaField" promptText="Calculé automatiquement" editable="false"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Frais de livraison :" style="-fx-font-size: 16px;"/>
+                <TextField fx:id="livraisonField" promptText="Ex: 39.99 €"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Total TTC :" style="-fx-font-size: 16px;"/>
+                <TextField fx:id="totalTTCField" promptText="Calculé automatiquement" editable="false"/>
+            </HBox>
+        </VBox>
+
+        <!-- Bouton Modifier -->
+        <Button text="Modifier Facture"
+                onAction="#modifierFacture"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px;"/>
+        <Button text="Impimer facture"
+                onAction="#genererPDF"
+                style="-fx-background-color:#4CAF ;"/>
+    </children>
+
+</VBox>

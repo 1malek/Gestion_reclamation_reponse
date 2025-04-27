@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>  <!-- Cet import est crucial -->
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.lastjavafx.PanierClientController"
+            prefHeight="400.0" prefWidth="600.0"
+            stylesheets="@Panier.css">
+
+    <children>
+        <!-- Title -->
+        <Label layoutX="220.0" layoutY="20.0" text="🛒 Mon Panier"
+               styleClass="title-label"/>
+
+        <!-- Scroll Pane -->
+        <ScrollPane layoutX="50.0" layoutY="60.0" prefWidth="500.0" prefHeight="250.0">
+            <content>
+                <GridPane fx:id="gridPanier" hgap="10" vgap="10">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                </GridPane>
+            </content>
+        </ScrollPane>
+
+        <!-- Clear All Button -->
+        <Button layoutX="180.0" layoutY="330.0" prefWidth="110.0"
+                text="Supprimer tout" onAction="#supprimerTout"
+                styleClass="danger-button"/>
+
+        <!-- Validate Basket Button -->
+        <Button layoutX="310.0" layoutY="330.0" prefWidth="110.0"
+                text="Valider Panier" onAction="#validerPanier"
+                styleClass="primary-button"/>
+
+        <!-- Return to Homepage Button -->
+        <Button layoutX="450.0" layoutY="330.0" prefWidth="110.0"
+                text="Retour Accueil" onAction="#retourAccueil"
+                styleClass="neutral-button"/>
+    </children>
+</AnchorPane>
