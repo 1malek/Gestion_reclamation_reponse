@@ -6,7 +6,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.lastjavafx.PanierClientController"
+            fx:controller="com.example.lastjavafx.Controller.PanierClientController"
             prefHeight="400.0" prefWidth="600.0"
             stylesheets="@Panier.css">
 

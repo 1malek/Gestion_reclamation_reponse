@@ -13,7 +13,7 @@
 <AnchorPane xmlns="http://javafx.com/javafx"
             stylesheets="@Commande.css"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.lastjavafx.CommandeController"
+            fx:controller="com.example.lastjavafx.Controller.CommandeController"
             prefHeight="400.0" prefWidth="600.0">
     <children>
         <VBox layoutX="180.0" layoutY="70.0" spacing="10">

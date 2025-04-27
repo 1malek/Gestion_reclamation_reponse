@@ -5,7 +5,7 @@
 
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.lastjavafx.FactureController"
+      fx:controller="com.example.lastjavafx.Controller.FactureController"
       spacing="20" alignment="CENTER" style="-fx-padding: 20;">
 
     <children>

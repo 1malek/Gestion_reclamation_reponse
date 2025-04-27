@@ -1,4 +1,4 @@
-package com.example.lastjavafx;
+package com.example.lastjavafx.Controller;
 
 import com.example.lastjavafx.models.Facture;
 import com.example.lastjavafx.services.ServiceFacture;
