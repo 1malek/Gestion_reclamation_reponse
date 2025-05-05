@@ -1,39 +1,35 @@
 package com.example.lastjavafx.services;
 
 import com.example.lastjavafx.models.Facture;
-import com.example.lastjavafx.utils.MyDataBase;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import com.example.lastjavafx.models.Facture;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ServiceFacture {
-    private final Connection cnx;
+    private final String URL = "jdbc:mysql://localhost:3306/mehdi-db";
+    private final String USER = "root";
+    private final String PASSWORD = "";
 
-    public ServiceFacture() {
-        this.cnx = MyDataBase.getInstance().getCnx();
-    }
+    public List<Facture> getPanier() {
+        List<Facture> panier = new ArrayList<>();
+        String query = "SELECT nom, prix, id_produit FROM nv_panier";
 
-    // Méthode pour modifier une facture existante
-    public void modifierFacture(Facture facture) {
-        String query = "UPDATE commande SET nom_client = ?, adresse_client = ?, total_ht = ?, tva = ?, total_ttc = ? WHERE id = ?";
+        try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(query)) {
 
-        try (PreparedStatement pst = cnx.prepareStatement(query)) {
-            pst.setString(1, facture.getNomClient());
-            pst.setString(2, facture.getAdresseClient());
-            pst.setDouble(3, facture.getTotalHT());
-            pst.setDouble(4, facture.getTva());
-            pst.setDouble(5, facture.getTotalTTC());
-            pst.setInt(6, facture.getId());
+            while (rs.next()) {
+                String nom = rs.getString("nom");
+                double prix = rs.getDouble("prix");
+                int idProduit = rs.getInt("id_produit");
 
-            int rowsAffected = pst.executeUpdate();
-            if (rowsAffected > 0) {
-                System.out.println("✅ Facture modifiée avec succès !");
-            } else {
-                System.out.println("⚠️ Aucune facture trouvée pour modification.");
+                panier.add(new Facture(nom, prix, idProduit));
             }
         } catch (SQLException e) {
-            System.err.println("❌ Erreur lors de la modification de la facture : " + e.getMessage());
+            System.err.println("❌ Erreur SQL : " + e.getMessage());
         }
+
+        return panier;
     }
 }

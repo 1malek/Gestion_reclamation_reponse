@@ -1,6 +1,7 @@
 package com.example.lastjavafx.models;
 
 public class Commande {
+    private int id;
     private int idClient;
     private int idLivraison;
     private String produit;
@@ -10,7 +11,8 @@ public class Commande {
 
     public Commande() {}
 
-    public Commande(int idClient, int idLivraison, String produit, float prix, String adresse, int num_tel) {
+    public Commande(int id,int idClient, int idLivraison, String produit, float prix, String adresse, int num_tel) {
+        this.id = id;
         this.idClient = idClient;
         this.idLivraison = idLivraison;
         this.produit = produit;
@@ -19,9 +21,11 @@ public class Commande {
         this.num_tel = num_tel;
     }
 
-    public int getIdClient() { return idClient; }
+    public int getId() { return idClient; }
+    public void setId(int id) { this.idClient = idClient; }
+    public long getIdClient() { return idClient; }
     public void setIdClient(int idClient) { this.idClient = idClient; }
-    public int getIdLivraison() { return idLivraison; }
+    public long getIdLivraison() { return idLivraison; }
     public void setIdLivraison(int idLivraison) { this.idLivraison = idLivraison; }
     public String getProduit() { return produit; }
     public void setProduit(String produit) { this.produit = produit; }

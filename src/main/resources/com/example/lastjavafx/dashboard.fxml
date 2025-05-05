@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox prefHeight="600.0" prefWidth="800.0" spacing="10.0" stylesheets="@Dashboard.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lastjavafx.Controller.DashboardController">
+    <children>
+
+        <!-- Zone principale du tableau de bord -->
+        <VBox alignment="CENTER" prefWidth="600.0" spacing="20.0" styleClass="dashboard-background">
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+            <children>
+                <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #00eaea;" text="Bienvenue Dans notre magasin" />
+                <Button alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" onAction="#handleAccueilClick" prefHeight="29.0" prefWidth="122.0" styleClass="sidebar-button" text="Accueil" textAlignment="CENTER" />
+                <Button alignment="CENTER" onAction="#handleDeconnexionClick" styleClass="sidebar-button" text="Déconnexion" />
+                <Label style="-fx-font-size: 20px; -fx-text-fill: #0e198a; -fx-font-weight: bold;" text="©Assia Chouikh">
+               <font>
+                  <Font size="23.0" />
+               </font></Label>
+            </children>
+        </VBox>
+
+    </children>
+</HBox>

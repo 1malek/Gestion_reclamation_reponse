@@ -50,7 +50,7 @@ public class PanierClientController implements Initializable {
             Button supprimerBtn = new Button("Supprimer");
             supprimerBtn.setStyle("-fx-background-color: #e74c3c; -fx-text-fill: white;");
             supprimerBtn.setOnAction(e -> {
-                servicePanier.supprimerProduitDuPanier(commande.getIdClient());
+                servicePanier.supprimerProduitDuPanier(commande.getProduit());
                 afficherPanier();
             });
 

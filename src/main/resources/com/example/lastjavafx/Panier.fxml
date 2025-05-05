@@ -3,23 +3,19 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 
-<!-- Root AnchorPane -->
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.example.lastjavafx.Controller.PanierController"
             prefHeight="400.0" prefWidth="600.0"
             stylesheets="@Panier.css">
 
-    <!-- Children Nodes -->
     <children>
-        <!-- Title Label -->
-        <Label layoutX="220.0" layoutY="20.0" text="🛒 Mon Panier"
-               styleClass="title-label"/>
+        <!-- Titre -->
+        <Label layoutX="220.0" layoutY="20.0" text="🛒 Mon Panier" styleClass="title-label"/>
 
-        <!-- ScrollPane for GridPane -->
+        <!-- Zone de défilement pour afficher les produits -->
         <ScrollPane layoutX="50.0" layoutY="60.0" prefWidth="500.0" prefHeight="250.0">
             <content>
-                <!-- GridPane to Display Cart Items -->
                 <GridPane fx:id="gridPanier" hgap="10" vgap="10">
                     <padding>
                         <Insets top="10" right="10" bottom="10" left="10"/>
@@ -28,20 +24,11 @@
             </content>
         </ScrollPane>
 
-        <!-- "Supprimer tout" Button -->
-        <Button layoutX="180.0" layoutY="330.0" prefWidth="110.0"
-                text="Supprimer tout" onAction="#supprimerTout"
-                styleClass="danger-button"
-                fx:id="btnSupprimerTout"/>
-
-        <!-- "Valider Panier" Button -->
-        <Button layoutX="310.0" layoutY="330.0" prefWidth="110.0"
-                text="Valider Panier" onAction="#validerPanier"
-                styleClass="primary-button"
-                fx:id="btnValiderPanier"/>
-        <!-- Return to Homepage Button -->
-        <Button layoutX="450.0" layoutY="330.0" prefWidth="110.0"
-                text="Retour Accueil" onAction="#retourAccueil"
-                styleClass="neutral-button"/>
+        <!-- Boutons en bas -->
+        <HBox layoutX="50.0" layoutY="330.0" spacing="20" alignment="CENTER">
+            <Button text="Supprimer tout" onAction="#supprimerTout" styleClass="danger-button"/>
+            <Button text="Valider Panier" onAction="#validerPanier" styleClass="primary-button"/>
+            <Button text="Retour Accueil" onAction="#retourAccueil" styleClass="neutral-button"/>
+        </HBox>
     </children>
 </AnchorPane>

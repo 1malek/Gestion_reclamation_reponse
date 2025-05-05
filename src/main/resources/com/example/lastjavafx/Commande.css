@@ -1,44 +1,85 @@
+/* 🌟 Title Styling */
 .form-title {
-    -fx-font-size: 20px;
+    -fx-font-size: 22px;
     -fx-font-weight: bold;
-    -fx-text-fill: #2c3e50; /* Fixed */
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 10px 0;
 }
 
+/* 📌 Form Fields */
 .form-field {
     -fx-background-color: white;
-    -fx-border-color: #ccc;
-    -fx-border-radius: 5;
-    -fx-padding: 8, 10; /* Fixed comma */
-    -fx-font-size: 14px;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 8px;
+    -fx-padding: 10px;
+    -fx-font-size: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 4, 0, 0, 2);
 }
 
+/* 🎨 Primary Button */
 .primary-button {
     -fx-background-color: #3498db;
     -fx-text-fill: white;
     -fx-font-weight: bold;
-    -fx-background-radius: 20;
+    -fx-font-size: 16px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 20px;
     -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 4, 0, 0, 2);
 }
 
 .primary-button:hover {
     -fx-background-color: #2980b9;
-    -fx-scale-x: 1.05;
-    -fx-scale-y: 1.05;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
     -fx-transition: 0.3s ease-in-out;
 }
 
+/* 🟦 Secondary Button */
 .secondary-button {
     -fx-background-color: transparent;
     -fx-border-color: #3498db;
     -fx-text-fill: #3498db;
-    -fx-border-radius: 20;
     -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 20px;
     -fx-cursor: hand;
 }
 
 .secondary-button:hover {
     -fx-background-color: #ecf0f1;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-transition: 0.3s ease-in-out;
+}
+
+/* 📦 Styling for the Input Box */
+.info-box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dcdcdc;
+    -fx-border-radius: 10px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 6, 0, 0, 3);
+}
+
+/* ✨ Labels */
+.label-field {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e;
+}
+.form-container {
+    -fx-background-color: #f7f9fc;
+    -fx-padding: 15px;
+    -fx-border-radius: 12px;
+    -fx-border-color: #dcdcdc;
+}
+.primary-button:hover, .secondary-button:hover {
     -fx-scale-x: 1.05;
     -fx-scale-y: 1.05;
     -fx-transition: 0.3s ease-in-out;
+}
+.title-label {
+    -fx-font-size: 16px;
 }

@@ -1,27 +1,57 @@
-/* En-tête */
-.hbox {
-    -fx-background-color: #8BC34A;
-    -fx-padding: 10;
+.facture-container {
+    -fx-background-color: white;
+    -fx-padding: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
 }
 
-/* Boutons de navigation */
-.button {
-    -fx-background-color: #558B2F;
-    -fx-text-fill: white;
+.facture-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.facture-date {
     -fx-font-size: 14px;
+    -fx-text-fill: #777;
+}
+
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 0;
+}
+
+.facture-label {
+    -fx-font-size: 16px;
+}
+
+.facture-value {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #444;
+}
+
+.facture-total-label {
+    -fx-font-size: 18px;
     -fx-font-weight: bold;
 }
 
-/* Tableau */
-.table-view {
-    -fx-border-color: #333333;
-    -fx-background-color: #FAFAFA;
+.facture-total-value {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #D32F2F;
 }
 
-/* Résumé des Totaux */
-.vbox {
-    -fx-border-color: #8BC34A;
-    -fx-border-width: 2;
-    -fx-background-color: #FAFAFA;
-    -fx-padding: 10;
+.facture-button {
+    -fx-background-color: #0288D1;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 8px 15px;
+    -fx-border-radius: 5px;
+}
+
+.facture-button:hover {
+    -fx-background-color: #01579B;
 }
