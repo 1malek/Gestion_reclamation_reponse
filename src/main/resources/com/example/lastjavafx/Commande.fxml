@@ -1,37 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            stylesheets="@Commande.css"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.lastjavafx.CommandeController"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@Commande.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lastjavafx.Controller.CommandeController">
     <children>
-        <VBox layoutX="180.0" layoutY="70.0" spacing="10">
-            <TextField fx:id="idClientField" promptText="code Client" styleClass="form-field"/>
-            <TextField fx:id="idLivraisonField" promptText="code Livraison" styleClass="form-field"/>
-            <TextField fx:id="produitField" promptText="Produit" styleClass="form-field"/>
-            <TextField fx:id="prixField" promptText="Prix" styleClass="form-field"/>
-            <TextField fx:id="adresseField" promptText="Adresse" styleClass="form-field"/>
-            <TextField fx:id="telField" promptText="Téléphone" styleClass="form-field"/>
+        <VBox layoutX="50.0" layoutY="70.0" spacing="10" alignment="CENTER">
+            <Label styleClass="title-label" text="🛍️ Commande Client" layoutX="50.0" layoutY="20.0" />
+
+
+            <!-- ✅ Boîte encadrée pour les informations principales -->
+            <HBox opacity="0.92" spacing="20" styleClass="info-box">
+                <VBox spacing="10">
+                    <Label styleClass="label-field" text="🔹 Numéro commande :" />
+                    <Label styleClass="label-field" text="🔹 Code Client :" />
+                    <Label styleClass="label-field" text="🚚 Code Livraison :" />
+                    <Label styleClass="label-field" text="🛍️ Produit :" />
+                    <Label styleClass="label-field" text="💰 Prix Total TND :" />
+                    <Label styleClass="label-field" text="📍 Adresse :" />
+                    <Label styleClass="label-field" text="📞 Téléphone :" />
+                </VBox>
+
+                <VBox spacing="10">
+                    <TextField fx:id="idField" editable="false" styleClass="input-field" />
+                    <TextField fx:id="idClientField" editable="false" styleClass="input-field" />
+                    <TextField fx:id="idLivraisonField" editable="false" styleClass="input-field" />
+                    <TextField fx:id="produitField" editable="false" styleClass="input-field" />
+                    <TextField fx:id="prixField" editable="false" styleClass="input-field" />
+                    <TextField fx:id="adresseField" styleClass="input-field" />
+                    <TextField fx:id="telField" styleClass="input-field" />
+                </VBox>
+            </HBox>
         </VBox>
-
-
-
-
-        <Button layoutX="150.0" layoutY="385.0" prefWidth="110.0"
-                text="Valider" onAction="#validerCommande" styleClass="primary-button"/>
-        <Button layoutX="280.0" layoutY="385.0" prefWidth="110.0"
-                text="Annuler" onAction="#annulerCommande" styleClass="secondary-button"/>
+        <Button layoutX="150.0" layoutY="385.0" onAction="#validerCommande" prefWidth="110.0" styleClass="primary-button" text="Valider" />
+        <Button layoutX="280.0" layoutY="385.0" onAction="#annulerCommande" prefWidth="110.0" styleClass="secondary-button" text="Annuler" />
+       <!-- <Button layoutX="340.0" layoutY="385.0" onAction="#voirCommande" prefWidth="110.0" styleClass="primary-button" text="Voir facture" /> -->
     </children>
 
 </AnchorPane>
